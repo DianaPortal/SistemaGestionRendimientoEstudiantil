@@ -1,4 +1,6 @@
 package Controller;
+import java.util.List;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -51,4 +53,13 @@ public class StudentController {
     public Response deleteStudent(@PathParam("id") int id) {
         return studentService.deleteStudent(id);
     }
+    
+ // Method add course to student by ID
+    @GET
+    @Path("/{id}/courses")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getCoursesByStudent(@PathParam("id") int id) {
+        return studentService.getCoursesByStudentId(id);
+    }
+
 }

@@ -1,0 +1,13 @@
+Controller\CourseController.class
+ServiceImpl\StudentServiceImpl.class
+ServiceImpl\GradesServiceImpl.class
+Models\Students.class
+ServiceImpl\CoursesServiceImpl.class
+dtos\GradesDTO.class
+config\AppConfig.class
+connection\ConectarBD.class
+Controller\StudentController.class
+connection\TestConetarBD.class
+Models\Grades.class
+Controller\GradesController.class
+Models\Courses.class

@@ -12,7 +12,7 @@ public class ConectarBD {
 	private static String url = "jdbc:mysql://localhost:3306/smartedu_db?serverTimezone=America/Lima&useUnicode=true&characterEncoding=UTF-8";
 	private static String usuario="root";
 	//private static String password="";
-	private static String password="mysql";
+	private static String password="";
 	private static Connection con;
 	
 	//creamos el metodo
