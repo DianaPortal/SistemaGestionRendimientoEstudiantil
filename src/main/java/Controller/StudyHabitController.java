@@ -9,6 +9,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import Models.StudyHabit;
 import ServiceImpl.StudyHabitServiceImpl;
@@ -21,11 +22,21 @@ public class StudyHabitController {
 	StudyHabitServiceImpl service = new StudyHabitServiceImpl();
 	
 	//Crea un hábito de estudio nuevo
-    @POST
-    @Path("/new-study-hab")
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void addStudyHabit(StudyHabit habit) {
-        service.addStudyHabit(habit);
+	@POST
+	@Path("/new-study-habits")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.TEXT_PLAIN)
+	public Response addStudyHabit(StudyHabit habit) {
+	    boolean registrado = service.addStudyHabit(habit);
+	    if (registrado) {
+	        return Response.status(Response.Status.CREATED)
+	                       .entity("✅ Hábito de estudio registrado exitosamente.")
+	                       .build();
+	    } else {
+	        return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
+	                       .entity("❌ Error al crear el hábito de estudio.")
+	                       .build();
+	    }
         
     }
 
@@ -37,6 +48,15 @@ public class StudyHabitController {
         return service.getStudyHabitsByStudentId(studentId);
     }
 
-   
+    
+    //Lista el resumen académico de un estudiante específico
+    //AVG= PROMEDIO DE NOTAS
+    //SUMA DE HORAS DE HÁBITO DE ESTUDIO
+    @GET
+    @Path("/students/{id}/study-summary")
+    @Produces(MediaType.APPLICATION_JSON)
+    public StudySummaryDTO getStudySummary(@PathParam("id") int studentId) {
+        return service.getStudySummary(studentId);
+    }
 
 }

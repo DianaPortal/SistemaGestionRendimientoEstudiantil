@@ -16,34 +16,25 @@ import dtos.StudySummaryDTO;
 public class StudyHabitServiceImpl {
 
 
-	public Response addStudyHabit(StudyHabit habit) {
-	    String sql = "INSERT INTO study_habits (student_id, study_date, hours, topic) VALUES (?, ?, ?, ?)";
+    public boolean addStudyHabit(StudyHabit habit) {
+        String sql = "INSERT INTO study_habits (student_id, study_date, hours, topic) VALUES (?, ?, ?, ?)";
 
-	    try (Connection conn = ConectarBD.getConexion();
-	         PreparedStatement stmt = conn.prepareStatement(sql)) {
+        try (Connection conn = ConectarBD.getConexion();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-	        stmt.setInt(1, habit.getStudentId());
-	        stmt.setDate(2, new java.sql.Date(habit.getStudyDate().getTime()));
-	        stmt.setDouble(3, habit.getHours());
-	        stmt.setString(4, habit.getTopic());
+            stmt.setInt(1, habit.getStudentId());
+            stmt.setDate(2, new java.sql.Date(habit.getStudyDate().getTime()));
+            stmt.setDouble(3, habit.getHours());
+            stmt.setString(4, habit.getTopic());
 
-	        int rowsAffected = stmt.executeUpdate();
-	        
-	        if (rowsAffected > 0) {
-	            // Devuelve una respuesta 200 OK con un mensaje de éxito
-	            return Response.status(Response.Status.CREATED)  // Código 201 Created
-	                           .entity("Hábito de estudio registrado exitosamente.")  // Mensaje de confirmación
-	                           .build();
-	        }
-	    } catch (SQLException e) {
-	        e.printStackTrace();
-	    }
-	    
-	    // En caso de error, devolver un mensaje de error
-	    return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
-	                   .entity("Error al crear el hábito de estudio.")
-	                   .build();
-	}
+            int filasInsertadas = stmt.executeUpdate();
+            return filasInsertadas > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 
 	    public List<StudyHabit> getStudyHabitsByStudentId(int studentId) {
 	        List<StudyHabit> habits = new ArrayList<>();
@@ -71,6 +62,8 @@ public class StudyHabitServiceImpl {
 	        return habits;
 	    }
 
+	    
+	    
 	    public StudySummaryDTO getStudySummary(int studentId) {
 	        StudySummaryDTO summary = null;
 	        String sql = "SELECT * FROM student_summary_view WHERE student_id = ?";
