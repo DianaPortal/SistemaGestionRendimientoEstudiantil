@@ -22,7 +22,7 @@ public class ConectarBD {
 			con=DriverManager.getConnection(url,usuario,password);
 			
 			//emitimos mensaje
-			//if(con!=null) JOptionPane.showMessageDialog(null,"hay conexion con BD","MENSAJE",JOptionPane.INFORMATION_MESSAGE);	
+		//if(con!=null) JOptionPane.showMessageDialog(null,"hay conexion con BD","MENSAJE",JOptionPane.INFORMATION_MESSAGE);	
 			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block

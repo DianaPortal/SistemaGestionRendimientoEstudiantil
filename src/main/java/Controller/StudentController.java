@@ -12,7 +12,7 @@ public class StudentController {
 
     private final StudentServiceImpl studentService = new StudentServiceImpl();
 
-    // Method to list all students
+    //Creamos el  Metodo para el listado de todos los estudiantes
     @GET
     @Path("/list")
     @Produces(MediaType.APPLICATION_JSON)
@@ -20,7 +20,7 @@ public class StudentController {
         return studentService.listStudents();
     }
 
-    // Method to create a new student
+    //Creamos el Metodo para el registro de estudiante
     @POST
     @Path("/create")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -29,7 +29,7 @@ public class StudentController {
         return studentService.createStudent(student);
     }
 
-    // Method to get a student by ID
+    //Creamos el  Metodo para obtener estudiante por id
     @GET
     @Path("/get/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -37,7 +37,7 @@ public class StudentController {
         return studentService.getStudent(id);
     }
 
-    // Method to update student details
+    //Creamos el  Metodo para actualizar estudiante
     @PUT
     @Path("/update")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -46,20 +46,31 @@ public class StudentController {
         return studentService.updateStudent(student);
     }
 
-    // Method to delete a student by ID
+    //Creamos el  Metodo para eliminar estudiante por ID
     @DELETE
     @Path("/delete/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response deleteStudent(@PathParam("id") int id) {
         return studentService.deleteStudent(id);
     }
-    
- // Method add course to student by ID
+
+    //Creamos el metodo registar cursos por estudiante
+	@POST
+	@Path("/{id}/courses")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response assignCourses(@PathParam("id") int studentId, List<Integer> courseIds) {
+        return studentService.assignCoursesToStudent(studentId, courseIds);
+	}
+	   
+ //Creamos el  Metodo para agregar un curso a un estudiante por ID
     @GET
     @Path("/{id}/courses")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getCoursesByStudent(@PathParam("id") int id) {
         return studentService.getCoursesByStudentId(id);
     }
+    
+    
 
 }

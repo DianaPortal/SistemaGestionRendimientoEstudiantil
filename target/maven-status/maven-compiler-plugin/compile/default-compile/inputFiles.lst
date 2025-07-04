@@ -1,13 +1,13 @@
-E:\EstacionDeTrabajo_DesarrolloServiciosWeb_2\Proyecto_ultimoCiclo\SistemaGestionRendimientoEstudiantil\src\main\java\config\AppConfig.java
-E:\EstacionDeTrabajo_DesarrolloServiciosWeb_2\Proyecto_ultimoCiclo\SistemaGestionRendimientoEstudiantil\src\main\java\connection\ConectarBD.java
-E:\EstacionDeTrabajo_DesarrolloServiciosWeb_2\Proyecto_ultimoCiclo\SistemaGestionRendimientoEstudiantil\src\main\java\connection\TestConetarBD.java
-E:\EstacionDeTrabajo_DesarrolloServiciosWeb_2\Proyecto_ultimoCiclo\SistemaGestionRendimientoEstudiantil\src\main\java\Controller\CourseController.java
-E:\EstacionDeTrabajo_DesarrolloServiciosWeb_2\Proyecto_ultimoCiclo\SistemaGestionRendimientoEstudiantil\src\main\java\Controller\GradesController.java
-E:\EstacionDeTrabajo_DesarrolloServiciosWeb_2\Proyecto_ultimoCiclo\SistemaGestionRendimientoEstudiantil\src\main\java\Controller\StudentController.java
-E:\EstacionDeTrabajo_DesarrolloServiciosWeb_2\Proyecto_ultimoCiclo\SistemaGestionRendimientoEstudiantil\src\main\java\dtos\GradesDTO.java
-E:\EstacionDeTrabajo_DesarrolloServiciosWeb_2\Proyecto_ultimoCiclo\SistemaGestionRendimientoEstudiantil\src\main\java\Models\Courses.java
-E:\EstacionDeTrabajo_DesarrolloServiciosWeb_2\Proyecto_ultimoCiclo\SistemaGestionRendimientoEstudiantil\src\main\java\Models\Grades.java
-E:\EstacionDeTrabajo_DesarrolloServiciosWeb_2\Proyecto_ultimoCiclo\SistemaGestionRendimientoEstudiantil\src\main\java\Models\Students.java
-E:\EstacionDeTrabajo_DesarrolloServiciosWeb_2\Proyecto_ultimoCiclo\SistemaGestionRendimientoEstudiantil\src\main\java\ServiceImpl\CoursesServiceImpl.java
-E:\EstacionDeTrabajo_DesarrolloServiciosWeb_2\Proyecto_ultimoCiclo\SistemaGestionRendimientoEstudiantil\src\main\java\ServiceImpl\GradesServiceImpl.java
-E:\EstacionDeTrabajo_DesarrolloServiciosWeb_2\Proyecto_ultimoCiclo\SistemaGestionRendimientoEstudiantil\src\main\java\ServiceImpl\StudentServiceImpl.java
+D:\ESTUDIOS\VI_CICLO\Desarrollo de servicios Web II\workspace\SistemaGestionRendimientoEstudiantil\src\main\java\config\AppConfig.java
+D:\ESTUDIOS\VI_CICLO\Desarrollo de servicios Web II\workspace\SistemaGestionRendimientoEstudiantil\src\main\java\connection\ConectarBD.java
+D:\ESTUDIOS\VI_CICLO\Desarrollo de servicios Web II\workspace\SistemaGestionRendimientoEstudiantil\src\main\java\connection\TestConetarBD.java
+D:\ESTUDIOS\VI_CICLO\Desarrollo de servicios Web II\workspace\SistemaGestionRendimientoEstudiantil\src\main\java\Controller\CourseController.java
+D:\ESTUDIOS\VI_CICLO\Desarrollo de servicios Web II\workspace\SistemaGestionRendimientoEstudiantil\src\main\java\Controller\GradesController.java
+D:\ESTUDIOS\VI_CICLO\Desarrollo de servicios Web II\workspace\SistemaGestionRendimientoEstudiantil\src\main\java\Controller\StudentController.java
+D:\ESTUDIOS\VI_CICLO\Desarrollo de servicios Web II\workspace\SistemaGestionRendimientoEstudiantil\src\main\java\dtos\GradesDTO.java
+D:\ESTUDIOS\VI_CICLO\Desarrollo de servicios Web II\workspace\SistemaGestionRendimientoEstudiantil\src\main\java\Models\Courses.java
+D:\ESTUDIOS\VI_CICLO\Desarrollo de servicios Web II\workspace\SistemaGestionRendimientoEstudiantil\src\main\java\Models\Grades.java
+D:\ESTUDIOS\VI_CICLO\Desarrollo de servicios Web II\workspace\SistemaGestionRendimientoEstudiantil\src\main\java\Models\Students.java
+D:\ESTUDIOS\VI_CICLO\Desarrollo de servicios Web II\workspace\SistemaGestionRendimientoEstudiantil\src\main\java\ServiceImpl\CoursesServiceImpl.java
+D:\ESTUDIOS\VI_CICLO\Desarrollo de servicios Web II\workspace\SistemaGestionRendimientoEstudiantil\src\main\java\ServiceImpl\GradesServiceImpl.java
+D:\ESTUDIOS\VI_CICLO\Desarrollo de servicios Web II\workspace\SistemaGestionRendimientoEstudiantil\src\main\java\ServiceImpl\StudentServiceImpl.java
